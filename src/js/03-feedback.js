@@ -16,7 +16,9 @@ populateTextarea();
 
 function onFormSubmit(evt) {
   evt.preventDefault();
-  console.log(formData);
+    console.log(formData);
+    console.log("Email: ", `${formData.email}`);
+    console.log("Message: ", `${formData.message}`);
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
