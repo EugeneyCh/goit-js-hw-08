@@ -18,9 +18,10 @@ function onFormSubmit(evt) {
   if (refs.emailarea.value === '' || refs.msgarea.value === '') {
     return alert(`Please fill in all the fields!`);
   }
-  console.log(formData);
-  console.log('Email: ', `${formData.email}`);
-  console.log('Message: ', `${formData.message}`);
+  data = JSON.parse(localStorage.getItem(STORAGE_KEY));
+  console.log(data);
+  console.log('Email: ', `${data.email}`);
+  console.log('Message: ', `${data.message}`);
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
 }
